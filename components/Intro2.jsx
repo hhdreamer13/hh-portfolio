@@ -1,20 +1,15 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
 
 import courgette100 from "../public/courgette-ascii-100.json";
+import { fadeAsciiIn } from "@/utils/asciiAnimationFade";
 
 const Intro = () => {
   const asciiRef = useRef(null);
 
   useEffect(() => {
-    const characters = asciiRef.current.querySelectorAll(".ascii-char");
-    gsap.fromTo(
-      characters,
-      { autoAlpha: 0, y: "-=20" },
-      { autoAlpha: 1, y: "+=20", stagger: 0.0005, duration: 0.5 }
-    );
+    fadeAsciiIn(asciiRef);
   }, []);
 
   return (
