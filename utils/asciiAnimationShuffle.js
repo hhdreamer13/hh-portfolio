@@ -1,4 +1,4 @@
-export const animateAsciiArt = (
+export const shuffleAsciiArt = (
   asciiRef,
   courgette100,
   scrambleIntervalDuration,
