@@ -6,19 +6,19 @@ const AsciiArtRenderer = ({ asciiJson }) => {
 
   useEffect(() => {
     fadeAsciiArt(asciiRef);
-  }, [asciiJson]); // Rerun animation when asciiJson changes
+  }, [asciiJson]);
 
   return (
     <div
       ref={asciiRef}
-      className='whitespace-pre inline-block tracking-[0] leading-[1.4] text-xs font-mono'
+      className='whitespace-pre inline-block tracking-[0] leading-[1.4] text-xs font-mono text-[0.5em] border group'
     >
       {asciiJson.map((row, rowIndex) => (
         <div key={rowIndex}>
           {row.map((cell, cellIndex) => (
             <span
               key={cellIndex}
-              className='ascii-char opacity-0'
+              className='ascii-char opacity-0 group-hover:animate-pulse'
               style={{ color: cell.color }}
             >
               {cell.char}
