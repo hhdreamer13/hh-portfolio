@@ -11,7 +11,7 @@ const AsciiArtRenderer = ({ asciiJson }) => {
   return (
     <div
       ref={asciiRef}
-      className='whitespace-pre inline-block tracking-[0] leading-[1.4] text-xs font-mono text-[0.3em]'
+      className='whitespace-pre inline-block tracking-[0] leading-[1.4] sm:text-xs font-mono text-[0.3em]'
     >
       {asciiJson.map((row, rowIndex) => (
         <div key={rowIndex}>
