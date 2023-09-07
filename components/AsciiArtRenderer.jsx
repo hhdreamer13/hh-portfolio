@@ -1,31 +1,25 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { fadeAsciiArt } from "@/utils/asciiAnimationFade";
 
-const AsciiArtRenderer = ({ asciiJson }) => {
+const AsciiArtRenderer = () => {
   const asciiRef = useRef(null);
 
   useEffect(() => {
-    fadeAsciiArt(asciiRef);
-  }, [asciiJson]);
+    // Fetch the pre-rendered HTML from your public directory
+    fetch("/asciiArt.html")
+      .then((response) => response.text())
+      .then((html) => {
+        asciiRef.current.innerHTML = html;
+        fadeAsciiArt(asciiRef);
+      });
+  }, []);
 
   return (
     <div
       ref={asciiRef}
-      className='whitespace-pre inline-block tracking-[0] leading-[1.4] text-xs font-mono text-[0.5em] border group'
+      className='whitespace-pre inline-block tracking-[0] leading-[1.4] text-xs font-mono text-[0.5em] transition-all duration-1000 ease-in-out hover:grayscale'
     >
-      {asciiJson.map((row, rowIndex) => (
-        <div key={rowIndex}>
-          {row.map((cell, cellIndex) => (
-            <span
-              key={cellIndex}
-              className='ascii-char opacity-0 group-hover:animate-pulse'
-              style={{ color: cell.color }}
-            >
-              {cell.char}
-            </span>
-          ))}
-        </div>
-      ))}
+      {/* Content will be filled in from asciiArt.html */}
     </div>
   );
 };
