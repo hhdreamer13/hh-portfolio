@@ -12,7 +12,6 @@ export const fadeAsciiArt = (asciiRef) => {
         from: "random",
       },
       duration: 0.5,
-      //   ease: "easeInOut",
     }
   );
 };

@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import { fadeAsciiArt } from "@/utils/asciiAnimationFade";
 
+// Grouped by two
+
 const AsciiArtRenderer = ({ asciiJson }) => {
   const asciiRef = useRef(null);
 
@@ -15,15 +17,24 @@ const AsciiArtRenderer = ({ asciiJson }) => {
     >
       {asciiJson.map((row, rowIndex) => (
         <div key={rowIndex}>
-          {row.map((cell, cellIndex) => (
-            <span
-              key={cellIndex}
-              className='ascii-char opacity-0'
-              style={{ color: cell.color }}
-            >
-              {cell.char}
-            </span>
-          ))}
+          {row.reduce((acc, cell, cellIndex, array) => {
+            if (cellIndex % 2 === 0) {
+              const nextCell = array[cellIndex + 1];
+              const combinedChar = cell.char + (nextCell ? nextCell.char : "");
+              const combinedColor = cell.color; // Keeping it simple; you can make it more complex if needed
+
+              acc.push(
+                <span
+                  key={cellIndex}
+                  className='ascii-char opacity-0'
+                  style={{ color: combinedColor }}
+                >
+                  {combinedChar}
+                </span>
+              );
+            }
+            return acc;
+          }, [])}
         </div>
       ))}
     </div>

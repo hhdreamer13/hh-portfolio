@@ -1,0 +1,80 @@
+import { useEffect, useRef, useState } from "react";
+import { fadeAsciiArt } from "@/utils/asciiAnimationFade";
+import { setupHoverEffect } from "@/utils/asciiHoverHandler";
+
+const leftArrowStart = 1;
+const leftArrowEnd = 14;
+const textStart = 15;
+const textEnd = 86;
+const rightArrowStart = 87;
+const rightArrowEnd = 100;
+
+const AsciiArtRenderer = ({ asciiJson, onAsciiChange }) => {
+  const [isFirstRender, setIsFirstRender] = useState(true);
+  const asciiRef = useRef(null);
+
+  useEffect(() => {
+    if (isFirstRender) {
+      fadeAsciiArt(asciiRef);
+      setIsFirstRender(false);
+    }
+    setupHoverEffect(asciiRef);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [asciiJson]);
+
+  return (
+    <div
+      ref={asciiRef}
+      className='whitespace-pre inline-block tracking-[0] leading-[1.4] font-mono text-[0.4em] sm:text-xs'
+    >
+      <div
+        id='left-arrow-overlay'
+        onClick={() => onAsciiChange("back")}
+        className='w-16 h-24 absolute top-6 left-7 bg-transparent cursor-pointer border'
+      ></div>
+      <div
+        id='text-overlay'
+        className='w-[475px] h-24 absolute top-6 right-1/2 translate-x-1/2 bg-transparent cursor-pointer border'
+      ></div>
+      <div
+        id='right-arrow-overlay'
+        onClick={() => onAsciiChange("next")}
+        className='w-16 h-24 absolute top-6 right-6 bg-transparent cursor-pointer border'
+      ></div>
+      {asciiJson.map((row, rowIndex) => (
+        <div key={rowIndex}>
+          {row.map((cell, cellIndex) => {
+            return (
+              <span
+                key={cellIndex}
+                className={[
+                  "ascii-char",
+                  "opacity-0",
+                  cell.char !== "&" &&
+                  cell.char !== "%" &&
+                  rowIndex * 100 + cellIndex < 800
+                    ? cellIndex >= leftArrowStart - 1 &&
+                      cellIndex <= leftArrowEnd - 1
+                      ? "left-arrow-effect"
+                      : cellIndex >= textStart - 1 && cellIndex <= textEnd - 1
+                      ? "text-effect"
+                      : cellIndex >= rightArrowStart - 1 &&
+                        cellIndex <= rightArrowEnd - 1
+                      ? "right-arrow-effect"
+                      : ""
+                    : "",
+                ].join(" ")}
+                style={{ color: cell.color }}
+                data-original-color={cell.color}
+              >
+                {cell.char}
+              </span>
+            );
+          })}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default AsciiArtRenderer;
