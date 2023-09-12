@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .art {
-  @apply text-black inline-block whitespace-pre tracking-[0] leading-[1.4] text-xs border border-solid border-slate-300 bg-white;
+  @apply text-black inline-block whitespace-pre tracking-[0] leading-[1.4] text-xs border border-solid border-slate-300 bg-slate-950;
   font-family: "Consolas", "BitstreamVeraSansMono", "CourierNew", Courier,
     monospace;
 }
