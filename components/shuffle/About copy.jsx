@@ -1,11 +1,7 @@
 "use client";
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useRef } from "react";
-import dynamic from "next/dynamic";
-
-const TypeShufflerWrapper = dynamic(() => import("./TypeShufflerWrapper"), {
-  ssr: false,
-});
+import { TypeShuffler } from "./TypeShuffler";
 
 const RetroText = () => {
   const textElementRef = useRef(null);
@@ -18,8 +14,8 @@ const RetroText = () => {
   }, []);
 
   return (
-    <TypeShufflerWrapper
-      ref={textElementRef.current}
+    <div
+      ref={textElementRef}
       className='font-mono text-slate-50 flex flex-col gap-6'
     >
       <p>
@@ -44,7 +40,7 @@ const RetroText = () => {
         adaptability, I embrace each project as a new challenge and an
         opportunity for growth.
       </p>
-    </TypeShufflerWrapper>
+    </div>
   );
 };
 
