@@ -1,26 +1,18 @@
-"use client";
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import dynamic from "next/dynamic";
 
 const TypeShufflerWrapper = dynamic(() => import("./TypeShufflerWrapper"), {
   ssr: false,
 });
 
-const RetroText = () => {
+const About = () => {
   const textElementRef = useRef(null);
-
-  useEffect(() => {
-    if (textElementRef.current) {
-      const typeShuffle = new TypeShuffler(textElementRef.current);
-      typeShuffle.trigger("fx1");
-    }
-  }, []);
 
   return (
     <TypeShufflerWrapper
       ref={textElementRef.current}
-      className='font-mono text-slate-50 flex flex-col gap-6'
+      className='text-slate-50 flex flex-col gap-6'
     >
       <p>
         An experienced developer with a multidisciplinary background in
@@ -48,4 +40,4 @@ const RetroText = () => {
   );
 };
 
-export default RetroText;
+export default About;

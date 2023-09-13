@@ -25,7 +25,7 @@ const AsciiArtRenderer = ({ asciiJson, onAsciiChange }) => {
   return (
     <div
       ref={asciiRef}
-      className='whitespace-pre inline-block tracking-[0] leading-[1.4] font-mono text-[0.4em] sm:text-xs'
+      className='whitespace-pre inline-block tracking-[0] leading-[1.4] text-xs'
     >
       <div
         id='left-arrow-overlay'

@@ -1,21 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect, useRef } from "react";
-import { TypeShuffler } from "./TypeShuffler";
+import { useRef } from "react";
+import dynamic from "next/dynamic";
 
-const RetroText = () => {
+const TypeShufflerWrapper = dynamic(() => import("./TypeShufflerWrapper"), {
+  ssr: false,
+});
+const Contact = () => {
   const textElementRef = useRef(null);
 
-  useEffect(() => {
-    if (textElementRef.current) {
-      const typeShuffle = new TypeShuffler(textElementRef.current);
-      typeShuffle.trigger("fx1");
-    }
-  }, []);
-
   return (
-    <div
-      ref={textElementRef}
-      className='font-mono text-slate-50 flex flex-col gap-6'
+    <TypeShufflerWrapper
+      ref={textElementRef.current}
+      className='text-slate-50 flex flex-col gap-6'
     >
       <div>
         <span>Email:</span> <span>hh.dreamer@gmail.com</span>
@@ -31,8 +27,8 @@ const RetroText = () => {
           Download Resume
         </button>
       </div>
-    </div>
+    </TypeShufflerWrapper>
   );
 };
 
-export default RetroText;
+export default Contact;

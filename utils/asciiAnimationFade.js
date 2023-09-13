@@ -7,10 +7,10 @@ export const fadeAsciiArt = (asciiRef) => {
     { autoAlpha: 0 },
     {
       autoAlpha: 1,
-      stagger: {
-        each: 0.003,
-        from: "random",
-      },
+      // stagger: {
+      //   each: 0.003,
+      //   from: "random",
+      // },
       duration: 0.1,
     }
   );

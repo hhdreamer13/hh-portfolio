@@ -9,11 +9,11 @@ import contact from "../public/contact.json";
 import project from "../public/project.json";
 import hooman from "../public/hooman.json";
 import About from "./shuffle/About";
-// import Contact from "./shuffle/Contact";
-// import Project from "./shuffle/Project";
+import Contact from "./shuffle/Contact";
+import Project from "./shuffle/Project";
 
 const Intro = () => {
-  const asciiArts = [hooman, about, contact, project];
+  const asciiArts = [hooman, about, project, contact];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleAsciiChange = (direction) => {
@@ -28,12 +28,12 @@ const Intro = () => {
 
   const renderTextShuffle = () => {
     switch (currentIndex) {
-      case 1: // Assuming 'about' is at index 1
+      case 1:
         return <About />;
-      case 2: // Assuming 'contact' is at index 2
-      // return <Contact />;
-      case 3: // Assuming 'project' is at index 3
-      // return <Project />;
+      case 2:
+        return <Project />;
+      case 3:
+        return <Contact />;
       default:
         return null;
     }
@@ -49,7 +49,7 @@ const Intro = () => {
           />
         </div>
         {currentIndex !== 0 && (
-          <div className='w-[750px] h-[550px] mt-40 rounded-md px-4 pt-10 text-justify border bg-slate-950 backdrop-blur-md'>
+          <div className='w-[725px] h-[560px] px-1 mt-40 rounded-md pt-10 text-justify bg-slate-950 backdrop-blur-md'>
             {renderTextShuffle()}
           </div>
         )}
