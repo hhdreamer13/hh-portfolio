@@ -15,22 +15,24 @@ const About = () => {
       className='text-slate-50 flex flex-col gap-6'
     >
       <p>
-        Multifaceted Full Stack Developer with a strong foundation in
-        engineering and design.
+        As a Full Stack Developer grounded in engineering and design, I've
+        always been driven by the magic that happens when these two worlds
+        collide.
       </p>
       <p>
-        Since relocating to France in 2020, I've applied my diverse skill set
-        across a variety of sectors, innovatively solving problems and
-        automating workflows.
+        My move to France in 2020 wasn't just a pin on a map; it was a catalyst,
+        propelling me further into a landscape of diverse sectors and
+        technological challenges.
       </p>
       <p>
-        Proficient in leading-edge technologies, I've tackled everything from
-        data visualization and workflow automation to interactive storytelling.
+        With a keen eye for detail and a knack for leading-edge technologies, my
+        portfolio ranges from intricately designed data visualizations to
+        automation workflows that breathe efficiency into systems.
       </p>
       <p>
-        Equally effective working autonomously or in collaborative environments,
-        my focus is on delivering high-impact, scalable solutions tailored to
-        the unique needs of each organization.
+        Whether I'm steering the ship alone or navigating in a crew, my north
+        star is the same: to deliver impactful, scalable solutions that are
+        laser-focused on the unique needs of each organization.
       </p>
     </TypeShufflerWrapper>
   );

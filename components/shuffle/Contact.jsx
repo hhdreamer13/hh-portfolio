@@ -14,18 +14,35 @@ const Contact = () => {
       className='text-slate-50 flex flex-col gap-6'
     >
       <div>
-        <span>Email:</span> <span>hh.dreamer@gmail.com</span>
+        <span className='text-[#e8b785]'>Email:</span>
+        <a href='mailto:hooman.hmzd@gmail.com' className='hover:text-cyan-600'>
+          {" "}
+          hooman.hmzd@gmail.com
+        </a>
       </div>
       <div>
-        <span>Twitter:</span> <span>@hh_dreamer</span>
+        <span className='text-[#e8b785]'>Twitter:</span>
+        <a
+          className='hover:text-cyan-600'
+          href='https://twitter.com/hooman_dev'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          {" "}
+          @hooman_dev
+        </a>
       </div>
       <div>
-        <span>Github:</span> <span>github.com/hhdreamer13</span>
-      </div>
-      <div>
-        <button onClick={() => window.open("path/to/your/resume.pdf")}>
-          Download Resume
-        </button>
+        <span className='text-[#e8b785]'>Github:</span>{" "}
+        <a
+          className='hover:text-cyan-600'
+          href='https://github.com/hhdreamer13'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          {" "}
+          github.com/hhdreamer13
+        </a>
       </div>
     </TypeShufflerWrapper>
   );
