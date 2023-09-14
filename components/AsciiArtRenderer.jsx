@@ -30,7 +30,7 @@ const AsciiArtRenderer = ({ asciiJson, onAsciiChange }) => {
       <div
         id='left-arrow-overlay'
         onClick={() => onAsciiChange("back")}
-        className='absolute sm:w-16 sm:h-24 sm:top-6 sm:left-7 w-11 h-16 top-11 left-3 bg-transparent cursor-pointer border'
+        className='absolute sm:w-16 sm:h-24 sm:top-6 sm:left-7 w-11 h-16 top-11 left-3 bg-transparent cursor-pointer'
       ></div>
       {/* <div
         id='text-overlay'
@@ -39,7 +39,7 @@ const AsciiArtRenderer = ({ asciiJson, onAsciiChange }) => {
       <div
         id='right-arrow-overlay'
         onClick={() => onAsciiChange("next")}
-        className='absolute sm:w-16 sm:h-24 sm:top-6 sm:right-7 w-11 h-16 top-11 right-3 bg-transparent cursor-pointer border'
+        className='absolute sm:w-16 sm:h-24 sm:top-6 sm:right-7 w-11 h-16 top-11 right-3 bg-transparent cursor-pointer'
       ></div>
       {asciiJson.map((row, rowIndex) => (
         <div key={rowIndex}>
