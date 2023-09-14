@@ -1,20 +1,31 @@
 "use client";
 
 import { useState } from "react";
+import useDeviceType from "@/utils/useDeviceType";
 
 import AsciiArtRenderer from "./AsciiArtRenderer";
 
-import about from "../public/about.json";
-import contact from "../public/contact.json";
-import project from "../public/project.json";
 import hooman from "../public/hooman.json";
+import about from "../public/about.json";
+import project from "../public/project.json";
+import contact from "../public/contact.json";
+
+import hoomanMobile from "../public/hooman-mobile.json";
+import aboutMobile from "../public/about-mobile.json";
+import projectMobile from "../public/project-mobile.json";
+import contactMobile from "../public/contact-mobile.json";
+
 import About from "./shuffle/About";
 import Contact from "./shuffle/Contact";
 import Project from "./shuffle/Project";
 
 const Intro = () => {
-  const asciiArts = [hooman, about, project, contact];
   const [currentIndex, setCurrentIndex] = useState(0);
+  const isDesktop = useDeviceType();
+
+  const asciiArts = isDesktop
+    ? [hooman, about, project, contact]
+    : [hoomanMobile, aboutMobile, projectMobile, contactMobile];
 
   const handleAsciiChange = (direction) => {
     let newIndex = currentIndex;
@@ -41,15 +52,15 @@ const Intro = () => {
 
   return (
     <>
-      <div className='h-screen w-full flex items-center justify-center bg-slate-950 overflow-hidden'>
-        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+      <div className='h-screen w-full flex items-center justify-center bg-slate-950'>
+        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden'>
           <AsciiArtRenderer
             asciiJson={asciiArts[currentIndex]}
             onAsciiChange={handleAsciiChange}
           />
         </div>
         {currentIndex !== 0 && (
-          <div className='w-[725px] h-[560px] px-1 mt-40 rounded-md pt-10 text-justify bg-slate-950 backdrop-blur-md'>
+          <div className='w-[725px] h-[560px] sm:px-1 px-2 sm:mt-40 mt-[13.5rem] sm:rounded-md rounded-none sm:pt-10 pt-7 text-justify bg-slate-950 backdrop-blur-md overflow-y-auto'>
             {renderTextShuffle()}
           </div>
         )}

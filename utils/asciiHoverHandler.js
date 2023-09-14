@@ -1,6 +1,6 @@
 export const setupHoverEffect = (asciiRef) => {
   const leftOverlay = document.getElementById("left-arrow-overlay");
-  const textOverlay = document.getElementById("text-overlay");
+  // const textOverlay = document.getElementById("text-overlay");
   const rightOverlay = document.getElementById("right-arrow-overlay");
 
   function handleMouseOver(effectClass) {
@@ -25,12 +25,12 @@ export const setupHoverEffect = (asciiRef) => {
   leftOverlay.addEventListener("mouseout", () =>
     handleMouseOut(".left-arrow-effect")
   );
-  textOverlay.addEventListener("mouseover", () =>
-    handleMouseOver(".text-effect")
-  );
-  textOverlay.addEventListener("mouseout", () =>
-    handleMouseOut(".text-effect")
-  );
+  // textOverlay.addEventListener("mouseover", () =>
+  //   handleMouseOver(".text-effect")
+  // );
+  // textOverlay.addEventListener("mouseout", () =>
+  //   handleMouseOut(".text-effect")
+  // );
   rightOverlay.addEventListener("mouseover", () =>
     handleMouseOver(".right-arrow-effect")
   );

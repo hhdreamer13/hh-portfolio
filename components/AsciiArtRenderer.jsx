@@ -25,21 +25,21 @@ const AsciiArtRenderer = ({ asciiJson, onAsciiChange }) => {
   return (
     <div
       ref={asciiRef}
-      className='whitespace-pre inline-block tracking-[0] leading-[1.4] text-xs'
+      className='whitespace-pre inline-block tracking-[0] leading-[1.4] sm:text-xs text-[0.4rem]'
     >
       <div
         id='left-arrow-overlay'
         onClick={() => onAsciiChange("back")}
-        className='w-16 h-24 absolute top-6 left-7 bg-transparent cursor-pointer'
+        className='absolute sm:w-16 sm:h-24 sm:top-6 sm:left-7 w-11 h-16 top-11 left-3 bg-transparent cursor-pointer border'
       ></div>
-      <div
+      {/* <div
         id='text-overlay'
         className='w-[475px] h-24 absolute top-6 right-1/2 translate-x-1/2 bg-transparent cursor-pointer'
-      ></div>
+      ></div> */}
       <div
         id='right-arrow-overlay'
         onClick={() => onAsciiChange("next")}
-        className='w-16 h-24 absolute top-6 right-6 bg-transparent cursor-pointer'
+        className='absolute sm:w-16 sm:h-24 sm:top-6 sm:left-7 w-11 h-16 top-11 right-3 bg-transparent cursor-pointer border'
       ></div>
       {asciiJson.map((row, rowIndex) => (
         <div key={rowIndex}>
