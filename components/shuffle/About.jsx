@@ -15,26 +15,22 @@ const About = () => {
       className='text-slate-50 flex flex-col gap-6'
     >
       <p>
-        An experienced developer with a multidisciplinary background in
-        engineering and design, I moved to France in 2020 to pursue academic
-        endeavors.
+        Multifaceted Full Stack Developer with a strong foundation in
+        engineering and design.
       </p>
       <p>
-        However, my journey led me to rediscover an even deeper passion for
-        hands-on problem-solving and tech innovation. In each role I've
-        undertaken, I've gone above and beyond to deliver solutions that exceed
-        expectations, optimize workflow, and create real-world impact.
+        Since relocating to France in 2020, I've applied my diverse skill set
+        across a variety of sectors, innovatively solving problems and
+        automating workflows.
       </p>
       <p>
-        My technical proficiencies span across JavaScript, React, Next.js,
-        Node.js, and Python, equipping me to engineer robust full-stack
-        solutions for a variety of challenges.
+        Proficient in leading-edge technologies, I've tackled everything from
+        data visualization and workflow automation to interactive storytelling.
       </p>
       <p>
-        While I thrive in autonomous settings, my collaborative spirit comes to
-        the fore in team environments. Committed to ongoing learning and
-        adaptability, I embrace each project as a new challenge and an
-        opportunity for growth.
+        Equally effective working autonomously or in collaborative environments,
+        my focus is on delivering high-impact, scalable solutions tailored to
+        the unique needs of each organization.
       </p>
     </TypeShufflerWrapper>
   );
