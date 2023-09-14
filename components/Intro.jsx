@@ -60,7 +60,7 @@ const Intro = () => {
           />
         </div>
         {currentIndex !== 0 && (
-          <div className='w-[725px] h-[560px] sm:px-1 px-2 sm:mt-40 mt-[13.5rem] sm:rounded-md rounded-none sm:pt-10 pt-7 text-justify bg-slate-950 backdrop-blur-md overflow-y-auto'>
+          <div className='sm:relative sticky bottom-0 left-0 w-[725px] h-[560px] sm:px-1 px-2 sm:mt-40 mt-56 sm:rounded-md rounded-none sm:pt-10 pt-7 text-justify bg-slate-950 backdrop-blur-md overflow-y-auto over'>
             {renderTextShuffle()}
           </div>
         )}
