@@ -23,10 +23,10 @@ const Intro = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const isDesktop = useDeviceType();
 
-  const asciiArts = isDesktop
-    ? [hooman, about, project, contact]
-    : [hoomanMobile, aboutMobile, projectMobile, contactMobile];
-
+  const asciiArts =
+    isDesktop === null || isDesktop
+      ? [hooman, about, project, contact]
+      : [hoomanMobile, aboutMobile, projectMobile, contactMobile];
   const handleAsciiChange = (direction) => {
     let newIndex = currentIndex;
     if (direction === "next") {
