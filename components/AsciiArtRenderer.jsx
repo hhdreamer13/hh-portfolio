@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { fadeAsciiArt } from "@/utils/asciiAnimationFade";
 import { setupHoverEffect } from "@/utils/asciiHoverHandler";
+import useDeviceType from "@/utils/useDeviceType";
 
 const leftArrowStart = 1;
 const leftArrowEnd = 14;
@@ -12,15 +13,16 @@ const rightArrowEnd = 100;
 const AsciiArtRenderer = ({ asciiJson, onAsciiChange }) => {
   const [isFirstRender, setIsFirstRender] = useState(true);
   const asciiRef = useRef(null);
+  const isDesktop = useDeviceType();
 
   useEffect(() => {
-    if (isFirstRender) {
+    if (isFirstRender && isDesktop !== null) {
       fadeAsciiArt(asciiRef);
       setIsFirstRender(false);
     }
     setupHoverEffect(asciiRef);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [asciiJson]);
+  }, [asciiJson, isDesktop]);
 
   return (
     <div
@@ -32,10 +34,6 @@ const AsciiArtRenderer = ({ asciiJson, onAsciiChange }) => {
         onClick={() => onAsciiChange("back")}
         className='absolute sm:w-16 sm:h-24 sm:top-6 sm:left-7 w-11 h-16 top-11 left-3 bg-transparent cursor-pointer'
       ></div>
-      {/* <div
-        id='text-overlay'
-        className='w-[475px] h-24 absolute top-6 right-1/2 translate-x-1/2 bg-transparent cursor-pointer'
-      ></div> */}
       <div
         id='right-arrow-overlay'
         onClick={() => onAsciiChange("next")}

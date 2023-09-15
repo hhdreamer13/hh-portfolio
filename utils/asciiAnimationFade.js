@@ -1,10 +1,13 @@
 import gsap from "gsap";
+
 export const fadeAsciiArt = (asciiRef) => {
   const characters = asciiRef.current.querySelectorAll(".ascii-char");
   const chunkSize = 50;
   const chunks = [];
   const fadeDuration = 0.1;
   const totalDuration = characters.length * 0.002;
+
+  console.log(characters);
 
   const glitchStopTime = totalDuration - fadeDuration;
 
