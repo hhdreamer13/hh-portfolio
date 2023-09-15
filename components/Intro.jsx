@@ -53,14 +53,14 @@ const Intro = () => {
   return (
     <>
       <div className='h-screen w-full flex items-center justify-center bg-slate-950'>
-        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden'>
+        <div className='absolute sm:top-1/2 left-1/2 -translate-x-1/2 sm:-translate-y-1/2 top-0 translate-y-0 overflow-hidden'>
           <AsciiArtRenderer
             asciiJson={asciiArts[currentIndex]}
             onAsciiChange={handleAsciiChange}
           />
         </div>
         {currentIndex !== 0 && (
-          <div className='sm:relative sticky bottom-0 left-0 w-[725px] h-[560px] sm:px-1 px-2 sm:mt-40 mt-56 sm:rounded-md rounded-none sm:pt-10 pt-7 text-justify bg-slate-950 backdrop-blur-md overflow-y-auto over'>
+          <div className='sm:relative absolute top-[7.2rem] sm:w-[725px] w-[400px] min-h-[560px] max-h-fit sm:px-1 px-2 sm:mt-40 mt-0 sm:rounded-md rounded-none sm:pt-10 pt-7 pb-5 text-justify bg-slate-950 backdrop-blur-md overflow-y-auto over'>
             {renderTextShuffle()}
           </div>
         )}
