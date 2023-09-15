@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={spline.className}>{children}</body>
+      <body className={`${spline.className} bg-slate-950`}>{children}</body>
     </html>
   );
 }
