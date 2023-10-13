@@ -5,10 +5,20 @@ import useDeviceType from "@/utils/useDeviceType";
 
 import AsciiArtRenderer from "./AsciiArtRenderer";
 
+import hoomanLight from "../public/hooman-light.json";
+import aboutLight from "../public/about-light.json";
+import projectLight from "../public/project-light.json";
+import contactLight from "../public/contact-light.json";
+
 import hooman from "../public/hooman.json";
 import about from "../public/about.json";
 import project from "../public/project.json";
 import contact from "../public/contact.json";
+
+import hoomanMobileLight from "../public/hooman-mobile-light.json";
+import aboutMobileLight from "../public/about-mobile-light.json";
+import projectMobileLight from "../public/project-mobile-light.json";
+import contactMobileLight from "../public/contact-mobile-light.json";
 
 import hoomanMobile from "../public/hooman-mobile.json";
 import aboutMobile from "../public/about-mobile.json";
@@ -23,10 +33,21 @@ const Intro = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const isDesktop = useDeviceType();
 
+  const asciiArtsLight =
+    isDesktop === null || isDesktop
+      ? [hoomanLight, aboutLight, projectLight, contactLight]
+      : [
+          hoomanMobileLight,
+          aboutMobileLight,
+          projectMobileLight,
+          contactMobileLight,
+        ];
+
   const asciiArts =
     isDesktop === null || isDesktop
       ? [hooman, about, project, contact]
       : [hoomanMobile, aboutMobile, projectMobile, contactMobile];
+
   const handleAsciiChange = (direction) => {
     let newIndex = currentIndex;
     if (direction === "next") {

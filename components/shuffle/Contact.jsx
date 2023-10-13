@@ -24,15 +24,15 @@ const Contact = () => {
         <span className='text-[#e8b785]'>Twitter:</span>
         <a
           className='hover:text-cyan-600'
-          href='https://twitter.com/hooman_dev'
+          href='https://twitter.com/hooman_h7'
           target='_blank'
           rel='noopener noreferrer'
         >
           {" "}
-          @hooman_dev
+          @hooman_h7
         </a>
       </div>
-      <div>
+      {/* <div>
         <span className='text-[#e8b785]'>Github:</span>{" "}
         <a
           className='hover:text-cyan-600'
@@ -43,7 +43,7 @@ const Contact = () => {
           {" "}
           github.com/hhdreamer13
         </a>
-      </div>
+      </div> */}
     </TypeShufflerWrapper>
   );
 };
