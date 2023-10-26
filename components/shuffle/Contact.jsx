@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <TypeShufflerWrapper
       ref={textElementRef.current}
-      className='text-slate-50 flex flex-col gap-6'
+      className='text-slate-50 flex flex-col gap-6 transform-gpu will-change-contents'
     >
       <div>
         <span className='text-[#e8b785]'>Email:</span>
@@ -32,7 +32,7 @@ const Contact = () => {
           @hooman_h7
         </a>
       </div>
-      {/* <div>
+      <div>
         <span className='text-[#e8b785]'>Github:</span>{" "}
         <a
           className='hover:text-cyan-600'
@@ -43,7 +43,7 @@ const Contact = () => {
           {" "}
           github.com/hhdreamer13
         </a>
-      </div> */}
+      </div>
     </TypeShufflerWrapper>
   );
 };

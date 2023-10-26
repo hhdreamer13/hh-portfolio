@@ -20,7 +20,6 @@ const Project = () => {
     <div className='text-slate-50'>
       <div className='w-full text-center text-[#216c8b]'>
         {projects.map((project, index) => {
-          console.log(project, selectedProject);
           return (
             <button
               key={project.id}
@@ -38,31 +37,45 @@ const Project = () => {
       <TypeShufflerWrapper
         ref={textElementRef.current}
         key={selectedProject.id}
-        className='text-slate-50 flex flex-col gap-4 mt-5'
+        className='text-slate-50 mt-5'
       >
         {selectedProject && (
-          <>
+          <div className='transform-gpu will-change-contents flex flex-col gap-4'>
             <h3 className=''>
               <span className='text-red-600'>@ </span>
               {selectedProject.employer}
             </h3>
             <p className='text-[#e8b785]'>{selectedProject.stack}</p>
-            <ul className='list-inside list-disc marker:text-slate-600'>
+            <ul className='list-inside list-disc flex flex-col gap-1 marker:text-slate-600'>
               {selectedProject.description.map((desc, index) => (
                 <li key={index} className='my-1'>
                   {desc}
                 </li>
               ))}
             </ul>
-            <a
-              className='text-cyan-600 hover:text-[#216c8b] w-fit'
-              href={selectedProject.link}
-              target='_blank'
-              rel='noreferrer'
-            >
-              Take a look
-            </a>
-          </>
+            <ul className='mt-5 mb-20 flex flex-col gap-4'>
+              {selectedProject.links.map((linkObj) => {
+                return (
+                  <li
+                    key={linkObj.name}
+                    className='group text-cyan-600 hover:text-[#216c8b] w-fit'
+                  >
+                    <a
+                      className=''
+                      href={linkObj.link}
+                      target='_blank'
+                      rel='noreferrer'
+                    >
+                      {linkObj.name}{" "}
+                      <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
+                        -&gt;
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         )}
       </TypeShufflerWrapper>
     </div>

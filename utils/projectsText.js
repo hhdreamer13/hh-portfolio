@@ -4,11 +4,21 @@ export const projects = [
     employer: "Tant Mieux Production",
     stack: "Next.js 13, React, Sanity, MapBox GL",
     description: [
-      "Developed an interactive platform for the Tobie Lolness series using exclusive assets.",
-      "Crafted unique map styles with Mapbox; implemented enrollment functionality for workshops; linked user forms to Firebase; utilized advanced features of Next.js 13.",
-      "Engineered an immersive menu experience and utilized ScrollTrigger for storytelling.",
+      "Developed an interactive platform for the Tobie Lolness series (set to be aired on France Télévisions), using exclusive assets in collaboration with key stakeholders.",
+      "Crafted unique map styles with Mapbox; integrated multiple APIs, including MapboxGL, Sanity for CMS, Resend for mailing services and Firebase. Utilized advanced features of Next.js 13, such as intercepting routes, caching, and revalidating.",
+      "Implemented an intuitive and interactive menu that effectively categorizes and showcases distinct content areas, facilitating seamless navigation tailored for the target audience.",
+      `Orchestrated a multi-faceted storytelling experience, combining text, imagery, and voice-over. This narrative journey, comprising seven scenes, presented a poetic tale that immersed users in the world of "Tobie Lolness", ensuring an engaging and cohesive narrative flow throughout.`,
     ],
-    link: "https://lesamisdetobie.fr/",
+    links: [
+      {
+        name: "Production",
+        link: "https://lesamisdetobie.fr",
+      },
+      {
+        name: "Development",
+        link: "https://tobie-site.vercel.app",
+      },
+    ],
   },
   {
     id: 2,
@@ -16,10 +26,19 @@ export const projects = [
     stack: "Python, React, Next.js",
     description: [
       "Recruited as a contracted administrative staff member to manage remote courses, I had the opportunity to develop key software solutions at IPAG de Paris.",
-      "Used Python to automate both the MCQ integration process by converting Excel files to XML and the faculty timesheet processing via Google Calendar API.",
-      "Engineered a Next.js form-driven web application for professor recruitment, featuring data validation, digital signatures, PDF generation, and MongoDB integration.",
+      "Developed an initial Python-based automation tool to convert Excel to Moodle XML for MCQ quizzes integration, revolutionizing the daily workflows for faculty by reducing manual entry time from up to an hour to mere seconds. Later scaled this success by transforming the tool into an online service built with Flask API and Next.js, empowering faculty and students to independently create and take quizzes.",
+      "Engineered a Next.js-based form-driven application for professor recruitment that streamlined the entire process. The application features data validation, digital signatures, PDF generation, and MongoDB integration, drastically reducing paperwork and potential for errors.",
     ],
-    link: "https://ipag-formulaire.vercel.app/",
+    links: [
+      {
+        name: "IPAG Recruitment Form",
+        link: "https://ipag-formulaire.vercel.app/",
+      },
+      {
+        name: "MCQ Converter",
+        link: "https://excel-moodle.vercel.app/",
+      },
+    ],
   },
   {
     id: 3,
@@ -30,7 +49,12 @@ export const projects = [
       "Leveraged D3.js for precise control over visual elements, alongside React and Vite for a responsive, high-performance web application.",
       "Utilized Python for extracting film color palettes and data analysis, coupled with ObservableHQ for ideation, resulting in innovative visualizations.",
     ],
-    link: "https://poanimaviz.art/",
+    links: [
+      {
+        name: "PoAnimaViz",
+        link: "https://poanimaviz.art/",
+      },
+    ],
   },
   {
     id: 4,
@@ -41,7 +65,16 @@ export const projects = [
       "The tool garnered interest from the entire decision-making chain and was presented to the Director of Crous de Paris as well as to sub-directors responsible for digital services and student life at Cnous, with consideration for national deployment.",
       "Engineered the app version with React and Sanity, optimized via react-query caching.",
     ],
-    link: "https://crous-assistant.info/",
+    links: [
+      {
+        name: "Crous Assistant",
+        link: "https://crous-assistant.info/",
+      },
+      {
+        name: "Crous Telegram Bot",
+        link: "https://t.me/crous_assistantBot",
+      },
+    ],
   },
   {
     id: 5,
@@ -51,6 +84,15 @@ export const projects = [
       "Developed websites across multiple sectors, such as theater, hotels, and academia, using a range of technologies from WordPress and basic HTML/CSS to React.",
       "Edited a POY award-winning short film and executed diverse design and editing tasks.",
     ],
-    link: "https://ayoobsalari.com/",
+    links: [
+      {
+        name: "Phd Student Portfolio",
+        link: "https://ayoobsalari.com/",
+      },
+      {
+        name: "Some Motion Graphics",
+        link: "vimeo.com",
+      },
+    ],
   },
 ];

@@ -12,7 +12,7 @@ const About = () => {
   return (
     <TypeShufflerWrapper
       ref={textElementRef.current}
-      className='text-slate-50 flex flex-col gap-6'
+      className='text-slate-50 flex flex-col gap-6 transform-gpu will-change-contents'
     >
       <p>
         As a Full Stack Developer grounded in engineering and design, I've
