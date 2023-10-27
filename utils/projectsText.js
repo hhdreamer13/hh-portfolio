@@ -47,7 +47,8 @@ export const projects = [
     description: [
       "Conducted extensive research and analysis of the short animation series “En sortant de l'école” culminating in a data visualization project.",
       "Leveraged D3.js for precise control over visual elements, alongside React and Vite for a responsive, high-performance web application.",
-      "Utilized Python for extracting film color palettes and data analysis, coupled with ObservableHQ for ideation, resulting in innovative visualizations.",
+      "Utilized Python for extracting film color palettes and data analysis, coupled with ObservableHQ for ideation, resulting in innovative visualizations of animation techniques and thematic connections.",
+      "Crafted compelling visual metaphors, including urban landscapes, galaxies, and flowers, symbolizing episodes, techniques, and creativity, offering a poetic and immersive exploration experience.",
     ],
     links: [
       {
