@@ -83,7 +83,7 @@ export const projects = [
     stack: "Adobe Creative Suite, HTML, CSS, WordPress, React",
     description: [
       "Developed websites across multiple sectors, such as theater, hotels, and academia, using a range of technologies from WordPress and basic HTML/CSS to React.",
-      "Edited a POY award-winning short film and executed diverse design and editing tasks.",
+      "Utilized Adobe Creative Suite (Photoshop, Illustrator, After Effects, Premiere, Audition), Cinema 4D and Blender for web design, motion design, and editing, including editing a Pictures of the Year International (POYi) award-winning short film.",
     ],
     links: [
       {
@@ -92,7 +92,7 @@ export const projects = [
       },
       {
         name: "Some Motion Graphics",
-        link: "vimeo.com",
+        link: "https://vimeo.com/nimportequi",
       },
     ],
   },

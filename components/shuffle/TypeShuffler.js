@@ -208,7 +208,7 @@ export class TypeShuffler {
 
   fx1() {
     // max iterations for each cell to change the current value
-    const MAX_CELL_ITERATIONS = 15;
+    const MAX_CELL_ITERATIONS = 13;
     let finished = 0;
 
     this.clearCells();
