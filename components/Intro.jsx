@@ -73,7 +73,7 @@ const Intro = () => {
 
   return (
     <>
-      <div className='sm:h-screen min-h-screen w-full flex items-center justify-center overflow-hidden'>
+      <div className='sm:h-screen min-h-screen w-full flex items-center justify-center'>
         <div className='absolute sm:top-1/2 left-1/2 -translate-x-1/2 sm:-translate-y-1/2 top-0 translate-y-0 overflow-hidden'>
           <AsciiArtRenderer
             asciiJson={asciiArts[currentIndex]}
