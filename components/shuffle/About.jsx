@@ -20,11 +20,6 @@ const About = () => {
         collide.
       </p>
       <p>
-        My move to France in 2020 wasn't just a pin on a map; it was a catalyst,
-        propelling me further into a landscape of diverse sectors and
-        technological challenges.
-      </p>
-      <p>
         With a keen eye for detail and a knack for leading-edge technologies, my
         portfolio ranges from intricately designed data visualizations to
         automation workflows that breathe efficiency into systems.
