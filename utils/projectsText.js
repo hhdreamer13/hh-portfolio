@@ -11,12 +11,8 @@ export const projects = [
     ],
     links: [
       {
-        name: "Production",
+        name: "Les Amis de Tobie",
         link: "https://lesamisdetobie.fr",
-      },
-      {
-        name: "Development",
-        link: "https://tobie-site.vercel.app",
       },
     ],
   },
