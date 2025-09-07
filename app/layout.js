@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 const spline = Spline_Sans_Mono({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "❯ ./hooman.sh",
+  title: "$ ./hooman.sh",
   description: "Full Stack Developer parsing chaos into solutions",
 };
 
